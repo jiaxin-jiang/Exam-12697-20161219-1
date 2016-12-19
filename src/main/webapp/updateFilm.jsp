@@ -24,7 +24,8 @@ language:<br>
         <option value="${l.language_id}">${l.name}</option>
     </c:forEach>
 </select>
-    <input type="submit" value="更新">
+    <input type="submit" value="更新"><br>
+    <a href="index.jsp">返回首页</a>
 </form>
 </body>
 </html>

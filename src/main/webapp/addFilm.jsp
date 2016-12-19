@@ -20,11 +20,12 @@ language:<br>
 <select name="language" id="language">
     <c:forEach items="${languages}" var="l">
         <%--<option value="${l.language_id}">${l.language_id}</option>--%>
-        
+
         <option value="${l.language_id}">${l.name}</option>
     </c:forEach>
 </select>
-    <input type="submit" value="新增">
+    <input type="submit" value="新增"><br>
+    <a href="index.jsp">返回首页</a>
 </form>
 </body>
 </html>

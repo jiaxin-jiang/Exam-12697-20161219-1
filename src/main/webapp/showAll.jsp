@@ -16,13 +16,8 @@
     <title>showAll</title>
 </head>
 <body>
-<%
-    //IFilmDao dao = new FilmDaoImpl();
-    //ArrayList<Film> films = dao.showAllFilm();
-    //request.setAttribute("allFilm", films);
-    //request.getRequestDispatcher("list.jsp").forward(request, response);
-
-%>
+<a href="film?type=showL">新增</a><br>
+<a href="index.jsp">返回首页</a>
 <table border="1">
     <tr>
         <th>film_id</th>
