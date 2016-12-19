@@ -80,7 +80,6 @@ public class FilmDaoImpl implements IFilmDao {
         boolean bool = false;
         Connection conn = null;
         PreparedStatement pst = null;
-        System.out.println("upda");
 
         try {
             conn = DbcpConnection.getConnection();
@@ -90,7 +89,7 @@ public class FilmDaoImpl implements IFilmDao {
             pst.setString(2, film.getDescription());
             pst.setInt(3, film.getLanguage().getLanguage_id());
             pst.setInt(4,film.getFilm_id());
-            System.out.println(sql);
+
             bool = pst.executeUpdate()>0?true:false;
         } catch (SQLException e) {
 
