@@ -5,6 +5,7 @@ import com.jjx.beans.Language;
 import com.jjx.daos.iDaos.IFilmDao;
 import com.jjx.db.DbcpConnection;
 
+import javax.sound.midi.Soundbank;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -63,8 +64,7 @@ public class FilmDaoImpl implements IFilmDao {
             bool = pst.executeUpdate()>0?true:false;
 
         } catch (SQLException e) {
-
-            e.printStackTrace();
+            System.out.println("有级联关系，无法删除！！！");
         }
         return bool;
     }
@@ -93,7 +93,7 @@ public class FilmDaoImpl implements IFilmDao {
             System.out.println(sql);
             bool = pst.executeUpdate()>0?true:false;
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
         return bool;
