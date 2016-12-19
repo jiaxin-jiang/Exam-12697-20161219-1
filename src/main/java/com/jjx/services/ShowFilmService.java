@@ -19,10 +19,10 @@ public class ShowFilmService implements Service {
             throws ServletException, IOException {
         // TODO Auto-generated method stub\
 
-        if(request.getParameter("fid")==null){
+        if (request.getParameter("fid") == null) {
             request.setAttribute("languages", language.languages());
             request.getRequestDispatcher("addFilm.jsp").forward(request, response);
-        }else{
+        } else {
             int fid = Integer.parseInt(request.getParameter("fid"));
             request.setAttribute("film", filmDao.showFilmByID(fid));
             request.setAttribute("languages", language.languages());

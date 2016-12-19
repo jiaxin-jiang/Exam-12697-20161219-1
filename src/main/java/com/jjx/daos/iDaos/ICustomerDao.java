@@ -8,5 +8,6 @@ import com.jjx.beans.Customer;
 public interface ICustomerDao {
 
     public Boolean validateCustomer(String first_name);
+
     public Customer findCustermerByFName(String first_name);
 }
