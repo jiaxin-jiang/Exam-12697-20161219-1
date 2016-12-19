@@ -20,13 +20,13 @@ public class LoginFilter implements Filter {
 
         /*RequestDispatcher dispatcher = request
                 .getRequestDispatcher("../index.jsp");*/
-        HttpSession session = ((HttpServletRequest)request).getSession();
-        System.out.println(session.getAttribute("customer"));
-        if(session.getAttribute("customer")!=null){
+        HttpSession session = ((HttpServletRequest) request).getSession();
+
+        if (session.getAttribute("customer") != null) {
             chain.doFilter(request, response);
-        }else {
+        } else {
             request.setAttribute("msg", "未登陆请，返回登陆界面登陆");
-            request.getRequestDispatcher("msg.jsp").forward((HttpServletRequest)request, (HttpServletResponse)response);
+            request.getRequestDispatcher("msg.jsp").forward((HttpServletRequest) request, (HttpServletResponse) response);
         }
     }
 
