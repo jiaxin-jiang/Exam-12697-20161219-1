@@ -10,8 +10,22 @@
     </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
-    <url-pattern>/index.jsp,/login,/film</url-pattern>
+    <url-pattern>/updateFilm.jsp</url-pattern>
   </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/showAll.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/addFilm.jsp</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/film</url-pattern>
+  </filter-mapping>
+
     <servlet>
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>com.jjx.servlets.LoginServlet</servlet-class>

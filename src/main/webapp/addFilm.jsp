@@ -20,6 +20,7 @@ language:<br>
 <select name="language" id="language">
     <c:forEach items="${languages}" var="l">
         <%--<option value="${l.language_id}">${l.language_id}</option>--%>
+        
         <option value="${l.language_id}">${l.name}</option>
     </c:forEach>
 </select>

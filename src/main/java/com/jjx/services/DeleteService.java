@@ -25,7 +25,7 @@ public class DeleteService implements Service {
                 request.setAttribute("allFilm", filmDao.showAllFilm());
                 request.getRequestDispatcher("showAll.jsp").forward(request, response);
             }else{
-                request.setAttribute("msg", "删除失败，请刷新页面！！！");
+                request.setAttribute("msg", "有关联的数据，无法删除！！！");
                 request.getRequestDispatcher("msg.jsp").forward(request, response);
             }
         }else {

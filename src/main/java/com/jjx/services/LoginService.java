@@ -27,7 +27,7 @@ public class LoginService implements Service {
             session.setAttribute("customer",first_name);
             request.getRequestDispatcher("showAll.jsp").forward(request, response);
         }else {
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
 }
